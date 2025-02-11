@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ComTech Learning Website</title>
+    <link rel="stylesheet" href="lessons.css">
+</head>
+<body>
+    <!-- lesson section start -->
+    <div class="lessons">
+        <nav>
+            <div class="logo">
+                <img src="CTlogo.png" >
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="moboLesson.html">MOBO Parts and funcution</a></li>
+                <li><a href="PSU.html">Motherboard PSU Front Panel connectors</a></li> 
+            </ul>    
+        </nav>
+
+    <!-- AD section start -->
+                    <section id="AD" class="AD">
+                        <div class="AD">
+                            <div class="ADtitle">ASSEMBLE/DISASSEMBLE of System Unit</div>
+                            <h2>Lesson 4<h2>
+                        </div>
+
+                    <div class="lesson AD">
+                        <h2 class="ADtitle"> Disassemble of System Unit</h2>
+                        <p class="ad-text"> 
+                            Step 1: Check if the computer is functioning by turning it on.</p>
+                            <p class="ad-text">
+                            Step 2:Power down the computer and unplug the power supply from the wall and the system.</p>
+                            <p class="ad-text">
+                            Step 3;Disconnect any external hardware or devices connected to the front panel.</p>
+                            <p class="ad-text">
+                            Step 4:Remove the side panel on the right-hand side of the computer case.</p>
+                            <p class="ad-text">
+                            Step 5:Detach the 4-pin, SATA data, USB F.P., audio F.P., and front panel connectors from Step 6:the motherboard and power supply.
+                        </p>
+                            <p class="ad-text">
+                            Step 7:Unscrew and remove the power supply unit (PSU) along with its attached cables.</p>
+                            <p class="ad-text">
+                            Step 8:Disconnect and remove the hard disk drive (HDD) from its bracket or cage.</p>
+                            <p class="ad-text">
+                            Step 9:Release the clips and carefully remove the memory module (RAM).</p>
+                            <p class="ad-text">
+                            Step 10:Unscrew and remove the motherboard from the case, ensuring all connections are detached.</p>
+                            
+                            </p>
+                            <div class="lesson AD">
+                                <h2 class="ADtitle"> Assemmble of System Unit</h2>
+                                <p class="ad-text"> 
+                                    Step 1: Attach Motherboard and position it evenly                                    </p>
+
+                                    <p class="ad-text">
+step 2: Make sure the screw holes are aligned properly                                    </p>
+
+<p class="ad-text">
+step 3: Insert Screws to the corresponding holes                                    </p>
+
+<p class="ad-text">
+step 4: Attach the HDD then insert screws properly                                    </p>
+
+<p class="ad-text">
+step 5: Attach the Power Supply then screw tightly                                    </p>
+
+<p class="ad-text">
+step 6: Attach the RAM in the RAM slot                                    </p>
+
+<p class="ad-text">
+step 7: Attach the 24-Pin Power Connector to its assigned port                                    </p>
+
+<p class="ad-text">
+
+        (make sure to properly align it before attaching)                                    </p>
+
+        <p class="ad-text">
+step 8: Attach the 4-Pin connector to its assigned port                                    </p>
+
+<p class="ad-text">
+step 9: Carefully attach the Front-Panel Connectors according to their assigned locations                                    </p>
+
+<p class="ad-text">
+	(make sure they are attached firmly in place)                                    </p>
+
+    <p class="ad-text">
+step 10: Attach the Audio Front Panel Connector                                    </p>
+
+<p class="ad-text">
+step 11: Attach USB Front Panel Connector                                    </p>
+
+<p class="ad-text">
+Step 12: Attach SATA Data Connector to the corresponding slot                                    </p>
+
+<p class="ad-text">
+step 13: Make sure every connection is stable and secure                                  </p>
+
+<p class="ad-text">
+step 14: Close the side panel and lock in place                                    </p>
+
+<p class="ad-text">
+step 15: Connect the power, HDMI, and other attachments necessary for the computer                                    </p>
+
+<p class="ad-text">
+step 16: Turn the PC on to see if it is functional
+
+</p>
+                                   
+<hr class="video">
+<div class="ADtitle2"> Assemble and Disassemble of System Unit </div>
+                                <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/prWyJo0lAgk?si=wZaV7FVhVwCSRjDO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>                         
+                             
+</hr>    
+                            </div>
+
+                    
+                
+
+
+
+ </section>
+    <!-- JavaScript -->
+
+
+    <script>
+        
+    
+        const navToggle = document.querySelector('.nav-toggle');
+const navMenu = document.querySelector('nav ul');
+
+navToggle.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+});
+
+
+
+const videos = document.querySelectorAll('video');
+const observer = new IntersectionObserver(
+    (entries) => {
+        entries.forEach(entry => {
+            const video = entry.target;
+
+            if (entry.isIntersecting) {
+                video. start; 
+            } else {
+                video. pause; 
+            }
+        });
+    },
+    {
+        threshold: 0.5 
+    }
+);
+
+
+videos.forEach(video => {
+    observer.observe(video);
+});
+
+</script>
+    
+
+</body>
+</html>

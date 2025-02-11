@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ComTech Learning Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Hero section start -->
+    <div class="hero">
+        <nav>
+            <div class="logo">
+                <img src="CTlogo.png" >
+            </div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#lesson">Lesson</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>    
+        </nav>
+    </div>    
+        <div class="content">
+            <h1>Hello,</h1>
+            <h3>Welcome to ComTech Learning Website</h3>
+        </div>
+    
+    
+    <!-- About section start -->
+    <section id="about" class="about">
+        <div class="main">
+            <div class="about-text">
+                <h2>About our Website</h2>
+                <h5>ComTech Learning</h5>
+                <p>This website includes different lessons for ICT students, more specifically, for Computer System Servicing (CSS) students. The site offers lessons that will provide users with the basic skills and knowledge one must possess to excel in this subject. With a focus on hands-on learning, this platform prepares students for success in both academic and real-world applications for Computer System Servicing.</p>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- lesspn Section Start -->
+    <section id="lesson" class="lesson">
+        <div class="container">
+            <h2>LESSONS</h2>
+            <div class="lesson-posts">
+                <article class="lesson-post">
+                    <h3>MOBO Parts and Functions</a></h3>
+                    <a href="moboLesson.html" class="btn">click me</a>
+                </article>
+                <article class="lesson-post">
+                    <h3>Motherboard PSU Front Panel connectors</a></h3>
+                    <a href="PSU.html" class="btn">click me</a>
+                </article>
+                <article class="lesson-post">
+                    <h3>Assemble/Disassemble of system unit</a></h3>
+                    <a href="AD.html" class="btn">click me</a>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+
+     <!-- Contact Section Start -->
+     <section id="contact" class="contact">
+        <div class="container">
+            <!-- Contact Heading -->
+            <h2>Contact us</h2>
+            
+            <!-- Contact Information Section -->
+            <div class="contact-info">
+                <!-- Phone Number -->
+                <p>EMAIL: comtechlearning0@gmail.com</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- JavaScript -->
+    <script>
+
+        document.querySelectorAll('nav ul li a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        const menuButton = document.querySelector('.menu-button');
+        const navMenu = document.querySelector('nav');
+        
+        if (menuButton && navMenu) {
+            menuButton.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+            });
+        }
+
+
+        const scrollToTopButton = document.querySelector('.scroll-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                scrollToTopButton.style.display = 'block';
+            } else {
+                scrollToTopButton.style.display = 'none';
+            }
+        });
+
+        if (scrollToTopButton) {
+            scrollToTopButton.addEventListener('click', () => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        }
+
+        const form = document.querySelector('.contact-form');
+        const nameInput = document.querySelector('#name');
+        const emailInput = document.querySelector('#email');
+        const messageInput = document.querySelector('#message');
+
+        if (form && nameInput && emailInput && messageInput) {
+            form.addEventListener('submit', (e) => {
+                let isValid = true;
+
+                if (nameInput.value.trim() === '') {
+                    isValid = false;
+                    alert('Name is required');
+                }
+                if (emailInput.value.trim() === '') {
+                    isValid = false;
+                    alert('Email is required');
+                }
+                if (messageInput.value.trim() === '') {
+                    isValid = false;
+                    alert('Message is required');
+                }
+
+                if (!isValid) {
+                    e.preventDefault();
+                }
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const lessonContainer = document.querySelector('.lesson-posts');
+
+            if (lessonContainer) {
+                fetch('https://api.example.com/blog-posts')
+                    .then(response => response.json())
+                    .then(data => {
+                        data.forEach(post => {
+                            const lessonPost = document.createElement('div');
+                            lessonPost.classList.add('lesson-post');
+                            lessonPost.innerHTML = `
+                                <h3>${post.title}</h3>
+                                <a href="${post.url}" class="btn">Read More</a>
+                            `;
+                            lessonContainer.appendChild(lessonPost);
+                        });
+                    })
+                    .catch(error => console.error('Error fetching blog posts:', error));
+            }
+        });
+       
+    </script>
+</body>
+</html>

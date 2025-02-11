@@ -1,0 +1,239 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial;
+    box-sizing: border-box;
+}
+
+.lessons {
+    width: 100%;
+    height: auto;
+    background-image: url(Blue.png);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    padding: 50px 0px;
+    align-items: center;
+    margin: auto;
+}
+
+.logo img {
+    float: top;
+    align-items: center;
+    width: 100px;
+    height: auto;
+  
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: auto;
+    padding: 10px 10px;
+    background-attachment: fixed;
+    font-size: 20px;
+    overflow: hidden;
+}
+
+
+.navbar a {
+    text-decoration: none;
+    color: #000; 
+    font-weight: bold;
+    font-size: 16px;
+}
+
+nav ul li {
+    list-style-type: none;
+    display: inline-block;
+    align-items: center;
+    padding: 20px ;
+    text-size-adjust: 2rem;
+
+}
+
+
+nav ul li a {
+    color:rgb(17, 24, 76);
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+nav ul li a:hover {
+    color: rgb(99, 114, 233);
+    transition: color 0.4s;
+}
+
+.btn {
+    background-color: rgb(17, 24, 76);
+    color: rgb(3, 2, 2);
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding: 10px 25px;
+    border-radius: 30px;
+    transition: transform 0.4s;
+}
+
+.btn:hover {
+    transform: scale(1.2);
+}
+
+.MOBO, .PSU, .CPU, .AD {
+    width: 100%;
+    text-align: center;
+    background-image: url(Blue.png);
+    background-size: cover;
+    background-repeat: no-repeat; 
+    background-attachment: fixed;
+    background-position: center;
+    background-color: rgba(165, 193, 217, 0.979); 
+    border-radius: 3%;
+    background-blend-mode: overlay;
+    flex-direction: column;
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    position: relative;
+    padding: 20px;
+    max-width: 1200px; 
+    margin: 50px auto; 
+    margin-top: 50px;
+    margin-bottom:50px;
+}
+
+.MOBOtitle, .PSUtitle, .CPUtitle, .ADtitle {
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    background-attachment: fixed;
+    color: rgb(14, 14, 90);
+    
+
+}
+
+.ADtitle2 {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    background-attachment: fixed;
+    color: rgb(14, 14, 90);
+    margin-top: 50px;
+    margin-bottom: 20px ;
+    
+
+}
+
+
+.mobo-text , .psu-text , .cpu-text {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: rgb(0, 0, 11);
+    text-align: center;
+    margin-bottom: 50px;
+    margin: 50px 50px;
+}
+.ad-text{
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: rgb(0, 0, 11);
+    text-align: center;
+    margin-bottom: 2px;
+    margin-left: 50px;  
+    margin-right: 50px ;
+}
+p {
+    margin-bottom: 40px; 
+}
+
+.mobo-text h2, .psu-text h2, .cpu-text h2, .ad-text h2 {
+    font-size: 2rem; 
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: left; 
+}
+.mobo-text h3, .psu-text h3, .cpu-text h3, .ad-text h3 {
+    font-size: 1rem; 
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: left; 
+}
+
+
+.mobo-text, .psu-text, .cpu-text, .ad-text {
+     font-size: 1.2rem;
+}
+.lesson-container {
+    display: grid;
+    grid-template-columns: 1fr; 
+    gap: 20px; 
+    width: 100%;
+    max-width: 1200px; 
+    margin: 0 auto;
+}
+
+
+
+.lesson {
+    margin-bottom: 30px; 
+}
+
+.lesson-image {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+@media (min-width: 768px) {
+    .lesson-image {
+        max-width: 400px; 
+    }
+}
+  
+  @media (max-width: 600px) {
+    nav {
+        flex-direction: column;
+        text-align: center;
+    }
+    nav ul {
+        flex-direction: column;
+    }
+    nav ul li {
+        display: block;
+        padding: 10px;
+    }
+    .MOBOtitle, .PSUtitle, .CPUtitle, .ADtitle {
+        font-size: 2rem;
+    }
+    .mobo-text, .psu-text, .cpu-text, .ad-text {
+        font-size: 1.2rem;
+        display: block;
+        padding: 10px; 
+    }
+    .mobo-text h2, .psu-text h2, .cpu-text h2, .ad-text h2 {
+    font-size: 1.2rem;
+    display: block;
+    padding: 10px; 
+    }
+    .mobo-text h3, .psu-text h3, .cpu-text h3, .ad-text h3 {
+    font-size: 1.2rem;
+    display: block;
+    padding: 10px; 
+    }
+    .container {
+        width: auto;
+        height: auto;
+        padding: 10px;
+    }
+    .img{
+        width: 30%;
+        height: auto;
+    }
+}
